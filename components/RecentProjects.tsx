@@ -34,9 +34,6 @@ const RecentProjects = () => {
                   className="h-full w-full object-cover" 
                   src="/bg.png" 
                   alt="bgimg"
-                  loading="lazy"
-                  quality={75}
-                  priority={false}
                 />
                 </div>
                 <Image
@@ -45,9 +42,7 @@ const RecentProjects = () => {
                   src={item.img}
                   alt="cover"
                   className="z-10 absolute bottom-0 lg:w-96 w-full h-full object-cover"
-                  loading="lazy"
-                  quality={75}
-                  priority={false}
+                 
                 />
               </div>
 
@@ -81,8 +76,7 @@ const RecentProjects = () => {
                         src={icon} 
                         alt="icon5" 
                         className="p-2 h-full w-full"
-                        loading="lazy"
-                        quality={75}
+                       
                       />
                     </div>
                   ))}

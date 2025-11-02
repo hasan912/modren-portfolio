@@ -8,15 +8,15 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-4" id="contact">
+    <footer className="w-full pt-12 pb-6 relative" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 bottom-0 h-48 md:h-72">
         <Image
         width={1920}
         height={1080}
           src="/footer-grid.svg"
           alt="grid"
-          className="w-full h-full opacity-50 "
+          className="w-full h-full opacity-50 object-cover"
           loading="lazy"
           quality={75}
         />
@@ -39,12 +39,12 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+      <div className="flex mt-8 md:mt-12 md:flex-row flex-col gap-4 justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Muhammad Hasan Baig | All rights reserved.
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex items-center md:gap-3 gap-4">
           {socialMedia.map((info) => (
             <div
               key={info.id}
