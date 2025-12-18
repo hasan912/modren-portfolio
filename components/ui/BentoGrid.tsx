@@ -67,11 +67,17 @@ export const BentoGridItem = ({
 
   useEffect(() => {
     setMounted(true);
+    
+    // Cleanup
+    return () => {
+      setMounted(false);
+      setCopied(false);
+    };
   }, []);
 
   const defaultOptions = {
     loop: false,
-    autoplay: true,
+    autoplay: copied,
     animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -83,6 +89,9 @@ export const BentoGridItem = ({
       const text = "hasanbaig365@gmail.com";
       navigator.clipboard.writeText(text);
       setCopied(true);
+      
+      // Reset after 2 seconds
+      setTimeout(() => setCopied(false), 2000);
     }
   };
 

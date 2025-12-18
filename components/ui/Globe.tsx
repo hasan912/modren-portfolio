@@ -221,7 +221,16 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
-  });
+  }, [globeData, data.length]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (globeRef.current) {
+        globeRef.current = null;
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -235,11 +244,16 @@ export function WebGLRendererConfig() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      gl.setPixelRatio(window.devicePixelRatio);
+      gl.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio for performance
     }
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  });
+    
+    // Cleanup
+    return () => {
+      gl.dispose();
+    };
+  }, [gl, size]);
 
   return null;
 }

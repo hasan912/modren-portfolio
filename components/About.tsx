@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -12,15 +11,13 @@ const About = () => {
 
       <div className="max-w-5xl mx-auto">
         {/* Main Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="relative rounded-3xl border border-white/[0.1] p-8 md:p-12"
+        <div
+          className="relative rounded-3xl border border-white/[0.1] p-8 md:p-12 opacity-0 animate-fadeIn"
           style={{
             background: "rgb(4,7,29)",
             backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+            animationDelay: "0.1s",
+            animationFillMode: "forwards",
           }}
         >
           {/* Intro */}
@@ -90,7 +87,7 @@ const About = () => {
           {/* Decorative corners */}
           <div className="absolute -top-2 -left-2 w-20 h-20 border-l-2 border-t-2 border-purple/50 rounded-tl-3xl"></div>
           <div className="absolute -bottom-2 -right-2 w-20 h-20 border-r-2 border-b-2 border-purple/50 rounded-br-3xl"></div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
