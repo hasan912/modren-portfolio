@@ -18,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 1,
       },
     ],
-    sitemap: 'https://hasanbaig.vercel.app/sitemap.xml',
+    sitemap: 'https://www.hasanbaig.me/sitemap.xml',
   }
 }

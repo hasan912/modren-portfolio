@@ -6,7 +6,7 @@ import { ThemeProvider } from "../data/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = "https://hasanbaig.vercel.app";
+const siteUrl = "https://www.hasanbaig.me";
 const siteName = "Muhammad Hasan Baig - Next.js Developer Portfolio";
 const siteDescription = "Experienced Next.js & React Developer from Pakistan specializing in building blazing-fast, responsive, and SEO-optimized web applications. Expert in Next.js 14, React, TypeScript, Tailwind CSS, Node.js, and modern web technologies. Available for freelance projects and full-time opportunities.";
 
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "s-bpVlYeZLaApWTGFFzT6Pauv6jr8GU4dlpKhTpsaJc",
   },
 };
 

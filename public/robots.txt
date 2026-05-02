@@ -6,7 +6,7 @@ Allow: /
 # Disallow: /admin
 
 # Sitemap location
-Sitemap: https://hasanbaig.vercel.app/sitemap.xml
+Sitemap: https://www.hasanbaig.me/sitemap.xml
 
 # Crawl-delay (optional)
 Crawl-delay: 1
